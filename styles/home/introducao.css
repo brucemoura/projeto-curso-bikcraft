@@ -1,0 +1,68 @@
+.introducao-bg {
+  background-color: var(--cor-12) ;
+  background-image: url(../image/dec/bottom-left.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 160px left 20px;
+  color: var(--cor-00);
+  box-shadow: inset 0 -120px var(--cor-00); /*solução para fazer a imagem sair do fluxo. usa-se o inset para criar o efeito da imagem está fora da caixa*/
+}
+
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+}
+
+.introducao-conteudo {
+  align-self: end;
+  padding-bottom: 200px; /*para essa solução da imagem sair do fluxo de certo voce tem que somar a quantidade de px que voce usou dentro do box-shadow*/
+}
+
+.introducao-conteudo > h1 {
+  margin-bottom: 32px;
+}
+
+.introducao-conteudo > p {
+  margin-bottom: 20px;
+  color: var(--cor-05);
+}
+
+/*abaixo temos um esquema para fazer a imagem sair do fluxo do conteúdo sem quebrar, para fazer isso primeiro temos que pegar o img e colocar ele a 100% da altura do pai, fazendo só isso ele vai começar a distorcer porque ele quer ficar a 100% do pai, para não acontecer isso usamo o object-fit: cover; como vimos anteriormente o object funciona tipo o background-size, depois que colocamos o object na imagem temos que criar uma div para a imagem, dentro da div podemos colocar a direção em que o conteudo vai vazar usando margin negativa.
+Quando nos fazemos esse esquema ele tem um problema, quando colocarmos um conteúdo abaixo, a imagem vai ficar acima desse conteudo, para resolvermos isso podemos ter duas possiveis soluções*/
+/*1º solucão - colocar uma caixa da cor do proximo conteúdo ou da cor de espaço do seu site e, e usar o z-index*/
+/*2º solução - criar uma sombra interna (vamos usar essa) */
+/* .introducao > .introducao-image{
+    margin-bottom: -120px;
+} */
+
+.introducao > .introducao-image > img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 1350px){
+  .introducao-bg {
+    background: var(--cor-12);
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao-bg {
+    background: var(--cor-11);
+    padding-top: 40px;
+    box-shadow: inset 0 -60px var(--cor-00);
+  }
+  .introducao {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .introducao-conteudo {
+    padding-bottom: 0;
+  }
+
+  .introducao > .introducao-image > img {
+    width: 100%;
+    height: 300px;
+  }
+}

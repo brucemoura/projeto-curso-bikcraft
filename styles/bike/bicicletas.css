@@ -1,0 +1,139 @@
+.bicicletas-bg{
+    background-image: linear-gradient(to right, var(--cor-00) 25%, var(--cor-11) 0%);
+    /*para criar o mesmo efeito da caixa fora do fluxo (caixa transbordando) da parte de tecnologia avançada, envés de usar um box-shadow podemos usar um background como acima, usamos o background aqui porque horizontalmente ele fica alinhado melhor */
+}
+
+.bicicletas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px 0;
+    background-image: url(../image/dec/top-right.svg);
+    background-repeat: no-repeat;
+    background-position: top 40px right 20px;
+}
+
+/*para posicionar o span de preço dnetro da imagem vamos ver duas possiveis soluções*/
+
+
+/*1º Solução (ja conhecemos)*/
+/* .bicicletas-imagem{
+    position: relative;
+}
+.bicicletas-imagem span{
+    background-color: var(--cor-12);
+    padding: 8px 16px 8px 8px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+} */
+
+/*2º solução*/
+.bicicletas-imagem{
+    display: grid;
+}
+
+.bicicletas-imagem img{
+    grid-area: 1/1;
+}
+
+.bicicletas-imagem span{
+    background-color: var(--cor-12);
+    padding: 8px 16px 8px 8px;
+    display: inline-block;
+    border-radius: 5px 0px 0px 5px;
+    margin-top: 20px;
+    
+    grid-area: 1/1;
+    place-self: start end;
+}
+/*explixação da 2º solução: 
+1º temos que colocar a imagem e o span dentro de um bloco
+2º temos que colocar uma nova propriedade "grid-area" (ela vai determinar aonde o seu elemento vai ficar, nesse caso na primeira linha e na primeira coluna) na imagem e no span
+3º quando você fizer isso nos dois itens acima, um vai ficar por cima do outro, para resolver isso temos que aplicar a propriedade "place-self" dentro do menor item que no caso e o span, quando colocarmos essa propriedade temos que colocar os valores "start" "end" o primeiro valor vai representar o "top-bottom" e o segundo vai representar o "rigth-left"*/
+
+.bicicletas-conteudo{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-content: start;
+}
+
+.bicicletas-conteudo h2,
+.bicicletas-conteudo p{
+    grid-column: 1/-1;
+}
+
+.bicicletas-conteudo h2{
+    margin-bottom: 20px;
+
+}
+
+.bicicletas-conteudo h2::before{
+    content: '';
+    display: block;
+    width: 12px;
+    height: 8px;
+    background-color: var(--cor-principal-01);
+    margin-bottom: 8px;
+}
+
+.bicicletas-conteudo p{
+    margin-bottom: 32px;
+}
+
+.bicicletas-conteudo a{
+    place-self: end; /*qunado você coloca qualquer conteúdo dentro de um bloco que tem aplicado nele um grid, e normal e que esse conteudo mesmo se for pequeno vai aumentar ate o maximo do conteudo do lado dele, para evitar isso use o place self, com essa propriedade ele vai ficar no tamanho normal dele e voce ainda pode posicionar ele ao centro ao final e ao inicio, com center, end e start, lembrando que esse alinhamento pode ser em duas partes.
+    place-self: end; a primeira parte você pode usar so um valor que vai aplicar em cima e em baixo na esquerda e na direita.
+    place-self: end center; ou você pode usar dois valores que vão ser aplicados em cima e em baixo com o primeiro valor, e na esquerda e na direita com o segundo valor*/
+}
+
+.bicicletas li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 
+espaçamento de itens dentro de uma lista de duas maneiras.
+.bicicletas li + li{
+    margin-top: 16px;
+} */.bicicletas ul{
+    display: grid;
+    gap: 16px;
+}
+
+
+.bicicletas-conteudo img{
+    width: 24px;
+    gap: 8px;
+
+}
+
+@media (max-width: 800px){
+    .bicicletas-bg{
+    background-color: var(--cor-11);
+    background-image: none;
+    }
+
+    .bicicletas{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 40px 0;
+    }
+    
+}
+
+@media (max-width: 600px){
+    .bicicletas-conteudo{
+        grid-template-columns: 1fr;
+    }
+    .bicicletas ul{
+        font-size: 1rem;
+        margin-bottom: 32px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .bicicletas a{
+        place-self: start;
+    }
+}

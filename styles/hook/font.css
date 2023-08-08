@@ -1,0 +1,169 @@
+:root {
+  /* fontes */
+  --font-poppins-normal: "Poppins regular", "Poppins";
+  --font-poppins-semi: "Poppins semi-bold", "Poppins";
+  --font-roboto-normal: "Roboto regular", "Roboto";
+  --font-roboto-medium: "Roboto medium", "Roboto";
+}
+
+/*link das fontes*/
+@font-face {
+  font-family: "Poppins regular";
+  src: url(../font/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Poppins semi-bold";
+  src: url(../font/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Roboto regular";
+  src: url(../font/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto medium";
+  src: url(../font/Roboto/Roboto-Medium.ttf);
+}
+
+/*tipografias diretas*/
+/* xxl = maior fonte */
+/* xl = fonte grande-1 */
+/* l = fonte grande-2 */
+/* m = fonte media */
+/* s = fonte pequena */
+/* xs = menor fonte */
+
+/* b = bold */
+
+/* font-1 = poppins */
+/* font-2 = roboto*/
+
+.font-1-xxl {
+  font-family: var(--font-poppins-semi);
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 1.125;
+}
+
+.font-1-xl {
+  font-family: var(--font-poppins-semi);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25; /* 125% */
+}
+
+.font-1-l,
+.font-1-l-b {
+  font-family: var(--font-poppins-normal);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+}.font-1-l-b {
+  font-weight: 600;
+}
+
+.font-2-l {
+  font-family: var(--font-roboto-normal);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+}
+
+.font-2-xl {
+  font-family: var(--font-poppins-normal);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25; /* 150% */
+}
+
+.font-2-l-b {
+  font-family: var(--font-roboto-medium);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.0225rem;
+  text-transform: uppercase;
+}
+
+.font-1-m {
+  font-family: var(--font-poppins-normal);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.35; /* 133.333% */
+}
+
+.font-1-m-b {
+  font-family: var(--font-roboto-medium);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.35; /* 133.333% */
+}
+
+.font-2-m {
+  font-family: var(--font-poppins-semi);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.35; /* 133.333% */
+}
+
+.font-1-s {
+  font-family: var(--font-poppins-normal);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+}
+
+.font-2-s {
+  font-family: var(--font-roboto-normal);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5; /* 150% */
+}
+
+.font-2-xs {
+  font-family: var(--font-roboto-normal);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.43; /* 142.857% */
+}
+
+.font-1-xs {
+  font-family: var(--font-poppins-semi);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.35; /* 133.333% */
+}
+
+@media (max-width: 1200px) {
+  .font-1-xxl {
+    font-size: 3rem;
+  }
+  .font-2-l,
+  .font-2-l-b {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 800px) {
+  .introducao-conteudo > h1 {
+    font-size: 2rem;
+  }
+
+  .font-1-xl,
+  .font-1-xl {
+    font-size: 1.5rem;
+  }
+}

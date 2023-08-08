@@ -1,0 +1,80 @@
+:root{
+    --cor-12: #000;
+    --cor-11: #121212;
+    --cor-10: #2e2e2e;
+    --cor-09: #404040;
+    --cor-08: #595959;
+    --cor-07: #707070;
+    --cor-06: #9C9C9C;
+    --cor-05: #B3B3B3;
+    --cor-04: #ccc;
+    --cor-03: #DEDEDE;
+    --cor-02: #EDEDED;
+    --cor-01: #F7F7F7;
+    --cor-00: #fff;
+
+    --cor-principal-05: #320;
+    --cor-principal-04: #640;
+    --cor-principal-03: #A66E00;
+    --cor-principal-02: #E5A40B;
+    --cor-principal-01: #FB0;
+
+    --cor-botão-gradient: linear-gradient(#FFBF00,#F2A50C);
+    --cor-botão-gradient-hover: linear-gradient(#FFb60d, #e59317 );
+
+}
+
+.c-00{
+    color: var(--cor-00);
+}
+.c-01{
+    color: var(--cor-01);
+}
+.c-02{
+    color: var(--cor-02);
+}
+.c-03{
+    color: var(--cor-03);
+}
+.c-04{
+    color: var(--cor-04);
+}
+.c-05{
+    color: var(--cor-05);
+}
+.c-06{
+    color: var(--cor-06);
+}
+.c-07{
+    color: var(--cor-07);
+}
+.c-08{
+    color: var(--cor-08);
+}
+.c-09{
+    color: var(--cor-09);
+}
+.c-10{
+    color: var(--cor-10);
+}
+.c-11{
+    color: var(--cor-11);
+}
+.c-12{
+    color: var(--cor-12);
+}
+.cp-1{
+    color: var(--cor-principal-01);
+}
+.cp-2{
+    color: var(--cor-principal-02);
+}
+.cp-3{
+    color: var(--cor-principal-03);
+}
+.cp-4{
+    color: var(--cor-principal-04);
+}
+.cp-5{
+    color: var(--cor-principal-05);
+}
