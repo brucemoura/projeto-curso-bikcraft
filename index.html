@@ -8,14 +8,18 @@
     <!--meta name serve para o conteudo que vai aparecer abaixo de um link em um buscador-->
     <title>Bikcraft - Projeto Final</title>
 
+    <!--Icon-->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <!--link paginas-->
-    <link rel="preload" href="styles/style.css" as="style">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preload" href="styles/style.min.css" as="style">
+    <link rel="stylesheet" href="styles/style.min.css">
 
     <!--link fontes-->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <script>document.documentElement.classList.add('js')</script><!--essa linha significa que so vai habilitar o javascript se ele existir, para não da erro caso algo saia do controle-->
 </head>
 
 <body id="seguros">
@@ -37,12 +41,12 @@
     <main class="introducao-bg">
         <div class="introducao container">
             <div class="introducao-conteudo">
-                <h1 class="font-1-xxl c-00">Bicicletas feitas sob medida<span class="cp-1">.</span></h1>
-                <p class="font-2-l">Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para o cliente. Explore o mundo na sua velocidade com a Bikcraft.</p>
-                <a href="bicicletas.html" class="botao">SELECIONE A SUA</a>
+                <h1 class="font-1-xxl c-00 fadeInDown" data-anime="200">Bicicletas feitas sob medida<span class="cp-1">.</span></h1>
+                <p class="font-2-l fadeInDown" data-anime="400">Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para o cliente. Explore o mundo na sua velocidade com a Bikcraft.</p>
+                <a href="bicicletas.html" class="botao fadeInDown" data-anime="600">SELECIONE A SUA</a>
             </div>
 
-            <picture class="introducao-image">
+            <picture class="introducao-image fadeInDown" data-anime="800">
                 <source media="(max-width: 800px)" srcset="styles/image/bicicletas/nimbus.jpg">
                 <img src="styles/image/fotos/introducao.jpg" alt="Bicicleta elétrica preta" width="1280" height="1600">
             </picture>
@@ -195,6 +199,9 @@
             <p class="footer-copy font-2-m c-06">Bikcraft &copy Alguns direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="js/plugins/simple-anime.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
